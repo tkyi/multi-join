@@ -1,11 +1,11 @@
 shared:
   image: node:8
 jobs:
-  component:
+  component1:
     requires: [~sd@52:component]
     steps:
       - do_nothing: echo "Hi how are you today? This build will be triggered by another project, which then listens for it to succeed"
-  component-fail:
+  component-fail1:
     steps:
       - do_nothing: echo "Hi how are you today? This build will be triggered by another project, which then listens for it to fail" && exit 1
  
