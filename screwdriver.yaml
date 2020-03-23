@@ -3,6 +3,8 @@ shared:
   steps:
     - echo: echo hi
 jobs:
+  main:
+    requires: [~commit]
   component:
     requires: []
   
