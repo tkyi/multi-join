@@ -1,17 +1,12 @@
 shared:
   image: node:8
-  steps:
-    - echo: echo hi
 jobs:
   component:
-    requires: []
-  
-  native-remote-join-test-succeed:
-    requires: 
-      - sd@52:component
-      - sd@53:component
-      
-  native-remote-join-test-fail:
-    requires: 
-      - sd@52:component-fail
-      - sd@53:component
+    requires: [~sd@52:component]
+    steps:
+      - do_nothing: echo "Hi how are you today? This build will be triggered by another project, which then listens for it to succeed"
+  component-fail:
+    steps:
+      - do_nothing: echo "Hi how are you today? This build will be triggered by another project, which then listens for it to fail" && exit 1
+ 
+
