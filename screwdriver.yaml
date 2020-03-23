@@ -1,8 +1,9 @@
 shared:
-    image: node:8
-    steps:
-        - echo: echo hi
-component:
+  image: node:8
+  steps:
+    - echo: echo hi
+jobs:
+  component:
     requires: []
   
   native-remote-join-test-succeed:
