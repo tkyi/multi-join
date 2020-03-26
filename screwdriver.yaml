@@ -10,10 +10,10 @@ jobs:
   
   native-remote-join-test-succeed:
     requires: 
-      - sd@53:component2
-      - sd@52:component1
+      - sd@2:component2
+      - sd@1:component1
       
   native-remote-join-test-fail:
     requires: 
-      - sd@53:component-fail2
-      - sd@52:component1
+      - sd@2:component-fail2
+      - sd@1:component1
