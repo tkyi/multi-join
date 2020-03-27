@@ -6,14 +6,12 @@ jobs:
   main:
     requires: [~commit]
   component:
-    requires: []
+    requires: [~commit]
   
   native-remote-join-test-succeed:
-    requires: 
-      - sd@3:component2
-      - sd@2:component1
+    #requires: [sd@3:component2, sd@2:component1]
+    requires: [~commit]
       
   native-remote-join-test-fail:
-    requires: 
-      - sd@3:component-fail2
-      - sd@2:component1
+    #requires: [sd@3:component-fail2, sd@2:component1]
+    requires: [~commit]
